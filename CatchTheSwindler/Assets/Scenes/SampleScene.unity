@@ -915,13 +915,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f5e690c7f6a356441be4f546939165d5, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 110
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -1205,6 +1205,11 @@ PrefabInstance:
       propertyPath: _door
       value: 
       objectReference: {fileID: 6402295306038924482}
+    - target: {fileID: 2776665061034925895, guid: b46226ce0ee35414baafa2272714a076,
+        type: 3}
+      propertyPath: Priority
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6540630860016229480, guid: b46226ce0ee35414baafa2272714a076,
         type: 3}
       propertyPath: m_Name
