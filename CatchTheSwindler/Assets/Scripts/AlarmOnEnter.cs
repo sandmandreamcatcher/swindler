@@ -8,7 +8,6 @@ public class AlarmOnEnter : MonoBehaviour
     [SerializeField] private Door _door;
 
     private CapsuleCollider2D _targetCollider;
-    private float _volumeStep = 0.5f;
 
     private void Start()
     {
@@ -22,7 +21,7 @@ public class AlarmOnEnter : MonoBehaviour
             if (_door.IsOpen)
                 _audio.mute = false;
 
-            _audio.volume = Mathf.InverseLerp(_collider.transform.position.x, (_collider.transform.position - _target.transform.position).magnitude, _volumeStep);
+            _audio.volume = Mathf.InverseLerp(_collider.transform.position.magnitude, 0, (_collider.transform.position - _target.transform.position).magnitude);
         }
         else
         {
