@@ -1210,6 +1210,16 @@ PrefabInstance:
       propertyPath: Priority
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 2776665061034925895, guid: b46226ce0ee35414baafa2272714a076,
+        type: 3}
+      propertyPath: MinDistance
+      value: 3.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 2776665061034925895, guid: b46226ce0ee35414baafa2272714a076,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 3.7976
+      objectReference: {fileID: 0}
     - target: {fileID: 6540630860016229480, guid: b46226ce0ee35414baafa2272714a076,
         type: 3}
       propertyPath: m_Name
@@ -1223,7 +1233,7 @@ PrefabInstance:
     - target: {fileID: 8075913631878415778, guid: b46226ce0ee35414baafa2272714a076,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.96
+      value: -2.87
       objectReference: {fileID: 0}
     - target: {fileID: 8075913631878415778, guid: b46226ce0ee35414baafa2272714a076,
         type: 3}
