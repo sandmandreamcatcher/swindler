@@ -16,11 +16,9 @@ public class AlarmOnEnter : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (_collider.IsTouching(_targetCollider))
+        if (_door.IsOpen)
         {
-            if (_door.IsOpen)
-                _audio.mute = false;
-
+            _audio.mute = false;
             _audio.volume = Mathf.InverseLerp(_collider.transform.position.magnitude, 0, (_collider.transform.position - _target.transform.position).magnitude);
         }
         else
