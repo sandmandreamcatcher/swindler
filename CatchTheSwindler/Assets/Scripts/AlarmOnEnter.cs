@@ -3,22 +3,20 @@
 public class AlarmOnEnter : MonoBehaviour
 {
     [SerializeField] private CircleCollider2D _collider;
-    [SerializeField] private AudioSource _audio;
-    [SerializeField] private GameObject _target;
-    private CapsuleCollider2D _targetCollider;
+    [SerializeField] public AudioSource _audio;
 
-    private void Start()
-    {
-        _target.TryGetComponent<CapsuleCollider2D>(out _targetCollider);
+    private void OnTriggerEnter2D(Collider2D collision)
+    {  
+            _audio.Play();
     }
 
-    private void FixedUpdate()
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        _audio.volume = Mathf.InverseLerp(_collider.transform.position.magnitude, 0, (_collider.transform.position - _target.transform.position).magnitude);
+       _audio.volume = Mathf.Clamp01(1 - Vector2.Distance(collision.transform.position, transform.position) / _collider.radius);
+    }
 
-        if (_collider.IsTouching(_targetCollider))
-            _audio.enabled = true;
-        else
-        _audio.enabled = false;
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        _audio.Stop();
     }
 }
